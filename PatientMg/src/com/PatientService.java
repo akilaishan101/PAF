@@ -45,9 +45,9 @@ public class PatientService {
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces(MediaType.TEXT_PLAIN)
 	public String UpdatePatient(String patientData) {
-		// Convert the input string to a JSON object
+		
 		JsonObject patientObject = new JsonParser().parse(patientData).getAsJsonObject();
-		// Read the values from the JSON object
+		
 		String patientID = patientObject.get("patientID").getAsString();
 		String FName = patientObject.get("FName").getAsString();
 		String LName = patientObject.get("LName").getAsString();
